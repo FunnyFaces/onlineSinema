@@ -1,14 +1,16 @@
 package org.onlinesinema;
 
+import java.util.List;
+
 public class Viewer {
     private String nickName;
     private int age;
-    private int numberOfFilmsWatched;
+    private List<Cinema> cinemaList;
 
-    public Viewer(String nickName, int age, int numberOfFilmsWatched) {
+    public Viewer(String nickName, int age, List<Cinema> cinemaList) {
         this.nickName = nickName;
         this.age = age;
-        this.numberOfFilmsWatched = numberOfFilmsWatched;
+        this.cinemaList = cinemaList;
     }
 
     public String getNickName() {
@@ -20,6 +22,10 @@ public class Viewer {
     }
 
     public int getNumberOfFilmsWatched() {
-        return numberOfFilmsWatched;
+        return this.cinemaList.size();
+    }
+
+    public List<Cinema> getCinemaList() {
+        return this.cinemaList;
     }
 }
